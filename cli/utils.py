@@ -240,6 +240,7 @@ def select_llm_provider() -> tuple[str, str | None]:
     ollama_url = os.environ.get("OLLAMA_BASE_URL") or "http://localhost:11434/v1"
     # (display_name, provider_key, base_url)
     PROVIDERS = [
+        ("NVIDIA NIM", "openai", "https://integrate.api.nvidia.com/v1"),  # Added this!
         ("OpenAI", "openai", "https://api.openai.com/v1"),
         ("Google", "google", None),
         ("Anthropic", "anthropic", "https://api.anthropic.com/"),
